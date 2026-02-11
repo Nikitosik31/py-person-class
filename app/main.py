@@ -15,10 +15,10 @@ def create_person_list(people: list) -> list:
     for human in people:
         person = Person.people[human["name"]]
 
-        if human["wife"]:
+        if human.get("wife"):
             person.wife = Person.people[human["wife"]]
 
-        if human["husband"]:
+        if human.get("husband"):
             person.husband = Person.people[human["husband"]]
 
         person_list.append(person)
